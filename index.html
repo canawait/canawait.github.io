@@ -87,7 +87,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><a href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen" class="headerlink" title="int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)"></a>int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</h2><p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
+        <p>本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理</p>
+<h3 id="int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><a href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen" class="headerlink" title="int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)"></a>int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</h3><p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
 <blockquote>
 <p>从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
 </blockquote>
@@ -294,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://canawait.github.io/2017/01/23/network-base/" data-id="ciy9ymq2l0002zjpv089au6mh" class="article-share-link">Share</a>
+      <a data-url="http://canawait.github.io/2017/01/23/network-base/" data-id="ciy9yxa5i000210pvegyoo6wp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络编程/">网络编程</a></li></ul>
@@ -345,7 +346,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://canawait.github.io/2017/01/23/hello-world/" data-id="ciy9ymq2b0001zjpvx0u7f245" class="article-share-link">Share</a>
+      <a data-url="http://canawait.github.io/2017/01/23/hello-world/" data-id="ciy9yxa5b000110pve5c227yx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/others/">others</a></li></ul>
@@ -386,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://canawait.github.io/2017/01/22/FirstNight/" data-id="ciy9ymq230000zjpvrm3bzk1c" class="article-share-link">Share</a>
+      <a data-url="http://canawait.github.io/2017/01/22/FirstNight/" data-id="ciy9yxa53000010pvydu1mvon" class="article-share-link">Share</a>
       
       
     </footer>
