@@ -360,7 +360,7 @@
         
           
             <p>本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理</p>
-<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr* svraddr, <span class="keyword">socklen_t</span> addrlen)</span></span></div></pre></td></tr></table></figure>
+<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr* svraddr, <span class="keyword">socklen_t</span> addrlen)</span></span></div></pre></td></tr></table></figure>
 <p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
 <blockquote>
 <p>从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
@@ -407,7 +407,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="accept连接"><a href="#accept连接" class="headerlink" title="accept连接"></a>accept连接</h2><figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">struct</span> sockaddr *cliaddr, <span class="keyword">socklen_t</span> *len)</span></span></div></pre></td></tr></table></figure>
+<h2 id="accept连接"><a href="#accept连接" class="headerlink" title="accept连接"></a>accept连接</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">struct</span> sockaddr *cliaddr, <span class="keyword">socklen_t</span> *len)</span></span></div></pre></td></tr></table></figure>
 <p>成功返回非负已连接描述符，出错返回 -1<br>accept成功返回时，会从已完成队列队头返回下一个已完成的连接。<br><em>注意：tcp三次握手第三次结束后，tcp仅仅是把连接从未完成连接队列移到已完成连接队列，所以不能说三次握手结束，accept就一定会返回。所以第三次握手结束是accpet返回的必要非充分条件，反过来为充分非必要条件</em></p>
 <h3 id="阻塞模式-1"><a href="#阻塞模式-1" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件  </p>
 <blockquote>
@@ -438,7 +438,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功读取返回非负整数，返回 -1且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-2"><a href="#阻塞模式-2" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>
@@ -480,7 +480,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c++"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功写入返回非负整数，返回 -1 且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-3"><a href="#阻塞模式-3" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>
