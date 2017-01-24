@@ -325,7 +325,9 @@
         
           
             <p>本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理</p>
-<h3 id="int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><a href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen" class="headerlink" title="int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)"></a>int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</h3><p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
+<pre><code class="c++"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr* svraddr, <span class="keyword">socklen_t</span> addrlen)</span></span>
+</code></pre>
+<p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
 <blockquote>
 <p>从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
 </blockquote>

@@ -88,24 +88,30 @@
 
 
 <meta name="description" content="本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理
-int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)
 
-从tcp协议的角度来看，connect将触发tcp三次握手，向">
+成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+
+从tcp协议的角度来看，connect将触发tcp三次握手">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP编程基础">
 <meta property="og:url" content="http://canawait.github.io/2017/01/23/network-base/index.html">
 <meta property="og:site_name" content="Mars.Wang">
 <meta property="og:description" content="本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理
-int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)
 
-从tcp协议的角度来看，connect将触发tcp三次握手，向">
-<meta property="og:updated_time" content="2017-01-24T07:57:56.000Z">
+成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+
+从tcp协议的角度来看，connect将触发tcp三次握手">
+<meta property="og:updated_time" content="2017-01-24T10:20:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP编程基础">
 <meta name="twitter:description" content="本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理
-int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)
 
-从tcp协议的角度来看，connect将触发tcp三次握手，向">
+成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
+
+从tcp协议的角度来看，connect将触发tcp三次握手">
 
 
 
@@ -331,7 +337,9 @@ int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)成功
 
       
         <p>本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理</p>
-<h3 id="int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><a href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen" class="headerlink" title="int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)"></a>int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</h3><p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
+<pre><code class="c++"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr* svraddr, <span class="keyword">socklen_t</span> addrlen)</span></span>
+</code></pre>
+<p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
 <blockquote>
 <p>从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
 </blockquote>
@@ -688,7 +696,7 @@ int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)成功
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><span class="nav-number">1.</span> <span class="nav-text">int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式"><span class="nav-number">2.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式"><span class="nav-number">3.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int-accept-int-sockfd-struct-sockaddr-cliaddr-socklen-t-len"><span class="nav-number"></span> <span class="nav-text">int accept(int sockfd, struct sockaddr cliaddr, socklen_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-1"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-1"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssize-t-read-int-fd-void-buf-size-t-len"><span class="nav-number"></span> <span class="nav-text">ssize_t read(int fd, void *buf, size_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-2"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-2"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssize-t-write-int-fd-const-void-buf-size-t-len"><span class="nav-number"></span> <span class="nav-text">ssize_t write(int fd, const void *buf, size_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-3"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-3"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int-close-int-fd-int-shutdown-int-fd-int-howto"><span class="nav-number"></span> <span class="nav-text">int close(int fd)/int shutdown(int fd, int howto)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#close的三种关闭方式"><span class="nav-number">1.</span> <span class="nav-text">close的三种关闭方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shutdown的三种关闭方式"><span class="nav-number">2.</span> <span class="nav-text">shutdown的三种关闭方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int-accept-int-sockfd-struct-sockaddr-cliaddr-socklen-t-len"><span class="nav-number"></span> <span class="nav-text">int accept(int sockfd, struct sockaddr cliaddr, socklen_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-1"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-1"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssize-t-read-int-fd-void-buf-size-t-len"><span class="nav-number"></span> <span class="nav-text">ssize_t read(int fd, void *buf, size_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-2"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-2"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssize-t-write-int-fd-const-void-buf-size-t-len"><span class="nav-number"></span> <span class="nav-text">ssize_t write(int fd, const void *buf, size_t len)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞模式-3"><span class="nav-number">1.</span> <span class="nav-text">阻塞模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞模式-3"><span class="nav-number">2.</span> <span class="nav-text">非阻塞模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int-close-int-fd-int-shutdown-int-fd-int-howto"><span class="nav-number"></span> <span class="nav-text">int close(int fd)/int shutdown(int fd, int howto)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#close的三种关闭方式"><span class="nav-number">1.</span> <span class="nav-text">close的三种关闭方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shutdown的三种关闭方式"><span class="nav-number">2.</span> <span class="nav-text">shutdown的三种关闭方式</span></a></li></ol></div>
             
 
           </div>
