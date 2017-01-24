@@ -101,7 +101,7 @@
 成功返回 0 ， 出错返回 -1（注意：出错不一定代表建立连接失败，以下会分析）
 
 从tcp协议的角度来看，connect将触发tcp三">
-<meta property="og:updated_time" content="2017-01-24T11:44:19.000Z">
+<meta property="og:updated_time" content="2017-01-24T11:50:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP编程基础">
 <meta name="twitter:description" content="本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理
@@ -444,7 +444,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">size_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功读取返回非负整数，返回 -1且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-2"><a href="#阻塞模式-2" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>
@@ -486,7 +486,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">size_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功写入返回非负整数，返回 -1 且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-3"><a href="#阻塞模式-3" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>

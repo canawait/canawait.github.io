@@ -438,7 +438,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">size_t</span> read(<span class="keyword">int</span> fd, <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功读取返回非负整数，返回 -1且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-2"><a href="#阻塞模式-2" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>
@@ -480,7 +480,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">ssize_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
+<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><figure class="highlight c"><table><tr><td class="code"><pre><div class="line"><span class="keyword">size_t</span> write(<span class="keyword">int</span> fd, <span class="keyword">const</span> <span class="keyword">void</span> *buf, <span class="keyword">size_t</span> len)</div></pre></td></tr></table></figure>
 <p>成功写入返回非负整数，返回 -1 且errno不为EAGAIN为读取失败</p>
 <h3 id="阻塞模式-3"><a href="#阻塞模式-3" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件</p>
 <blockquote>
