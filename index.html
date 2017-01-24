@@ -250,7 +250,7 @@
         <p>本文主要整理了在TCP编程过程中，常用的一些函数，以及常会遇到的一些异常情况，以及如何对这些情况进行处理</p>
 <h3 id="int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen"><a href="#int-connect-int-sockfd-const-struct-sockaddr-svraddr-socklen-t-addrlen" class="headerlink" title="int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)"></a>int connect(int sockfd, const struct sockaddr* svraddr, socklen_t addrlen)</h3><p>成功返回 0 ， 出错返回 -1（<strong>注意</strong>：出错不一定代表建立连接失败，以下会分析）</p>
 <blockquote>
-<p>-从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
+<p>从tcp协议的角度来看，connect将触发tcp三次握手，向对端发送SYN包，在 <strong>非阻塞</strong> 模式下，connect会在收到对端的SYN+ACK包后返回</p>
 </blockquote>
 <h3 id="阻塞模式"><a href="#阻塞模式" class="headerlink" title="阻塞模式"></a>阻塞模式</h3><p>返回条件  </p>
 <blockquote>
@@ -581,11 +581,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">others</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络编程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络编程</a>
+                <a href="javascript:void(0)" class="js-tag color2">others</a>
               </li>
             
             <div class="clearfix"></div>
